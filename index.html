@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>荒唐岛 | 这是一个私人博客</title>
+
+  
+  <meta name="author" content="Yining">
+  
+
+  
+
+  
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  
+
+  <meta property="og:site_name" content="荒唐岛"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="荒唐岛" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+</head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">荒唐岛</a>
+    </h1>
+    <p class="site-description">这是一个私人博客</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
+      
+        <li><a href="/">主页</a></li>
+      
+        <li><a href="/archives">杂谈</a></li>
+      
+        <li><a href="/life">生活</a></li>
+      
+        <li><a href="/projects">项目</a></li>
+      
+        <li><a href="/about">关于</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+    <main class="site-main posts-loop">
+    
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2018/02/07/hi/"><span>hi</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/02/07/hi/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-02-07T10:18:37.000Z">
+          2018-02-07
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>这是啥</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2018/01/12/Unicode-and-UTF-8/"><span>Unicode 和 UTF-8</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/01/12/Unicode-and-UTF-8/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-01-12T07:08:58.000Z">
+          2018-01-12
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>最近在写程序的时候遇到了一些编码问题，做了一些研究，简单记录一下。</p>
+<p>Mac OS 默认安装的Python版本是2.7，我也懒得折腾，一直基于2.7版本工作。但是前两天在处理Emoji的时候，发现用Python遍历字符串中的字符时，会默认把单个Emoji表情拆分成多个字符。</p>
+<p>产生这个问题的原因是Python2.7版本处理Unicode字符是基于USC2编码，即使用两个字节来标识单个Unicode字符，但是部分Emoji表情已经超出USC2的范围，应该使用USC4来处理。</p>
+<p>解决这个问题的办法有两种：</p>
+<ol>
+<li>重新编译Python2.7，并指定Unicode编码方式为USC4</li>
+<li>使用Python3.3+，默认使用USC4</li>
+</ol>
+<p>我决定使用第二种方式，因此，我也打算将应用版本升级到最新的Python3.6.4。在研究这个问题的过程中，也对Unicode字符集有个更深的了解。</p>
+<p>Unicode 顾名思义，是为了解决不同语言和符号在数字世界统一显示的问题，是使用“U+”开头的十六进制的数字串。被称为“Code Point”。</p>
+<p>全世界所有的字符假如超过10万个，那么就需要至少3个字节来表示一个“Code Point”，2个字节16比特最大表示65536。并且Unicode是可以扩充的字符集，并没有限制字符个数。</p>
+<p>如果直接使用“Code Point”来映射字符，那么Unicode字符集扩展进行扩展时，到底使用几个字节来表示一个字符就会变成一件不确定的事。另外还有一件不能忍受的事是在表示英文字母和数字时（互联网上绝大部分内容），本来使用一个字节就能搞定的事变成使用四个字节（假定），带来了巨大的存储和网络带宽浪费。</p>
+<p>于是对Unicode编码就变得很有必要了，要让计算机理解Unicode数字串究竟代表那个字符，就必须告诉计算机编码标准，目前常见的编码方式有“ASCII”、“UTF-8”、“UTF-16”等，旧时代遗留下来的上百种编码方式，也可以运用到对Unicode的字符集的编码上，于是皆大欢喜。</p>
+<p>其中最流行的编码方式是“UTF-8”，这是一种可变长的编码方式。换句话说，如果是英文字符，采用“UTF-8”编码，则占用一个字节；如果是中文，采用“UTF-8”编码，则占用二个字节。所以采用UTF-8编码的文件，单个字符占用的字节数从1个到多个不等。</p>
+<p>所以在Python2.7判断字符串长度时，无法识别超过2个字节的字符，所以直接拆分处理了。</p>
+<p>上文只是基于这两天研究的一个总结，部分细节可能不准确，欢迎勘正。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/12/13/Comment-of-Free-to-Choose/"><span>评《自由选择》</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/12/13/Comment-of-Free-to-Choose/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-12-13T09:06:17.000Z">
+          2017-12-13
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>《自由选择》是大名鼎鼎的自由派经济学家弗里德曼的著作。看这本书之前我并不认识他，因为我对经济学一无所知，正因为无知，才激发了求知的好奇。整本书看完，说不上特别理解，但有一些观点是可以回忆起来的。</p>
+<ol>
+<li>推崇市场这个看不见的手，强调价格的信息传递作用。政府的职责范围越来越大，导致越来越多的行政政策使价格传递的信息失效，从而使市场变得盲目。</li>
+<li>工会的职责之一是建立准入门槛，保证服务提供者的稀缺性，导致了服务价格高昂、服务供给不足。这一点在医疗行业表现得尤其明显。开放管制，让大众有自由选择职业的权利是治疗这些疾病的良方，让消费者用脚投票。</li>
+<li>扼制垄断最好的手段是充分竞争，只要国家间充分自由贸易，就不会产生垄断。</li>
+<li>政府为了解决问题，不断成立新的部门，导致利益群体扩大，行政成本逐渐大于获得的收益。解决问题的良方依然是充分相信市场的力量。</li>
+<li>弗里德曼应该是非常推崇亚当·斯密的，在书中多次引用亚当·斯密的观点。</li>
+<li>认为美国现行的教育制度，表面上是补贴穷人，实际上是剥削穷人，补贴富人，加剧了不公平。</li>
+</ol>
+<p>在书的最后，弗里德曼针对美国当时的情况，提出了几条建设性的修正案，摘抄几天比较有意思的如下：</p>
+<ol>
+<li>国会不得制定任何法律限制商品和劳务供应者对其商品和服务进行定价的自由。</li>
+<li>各州不得制定和执行任何法律，使得合众国的公民从事其自选工作或职业的自由受到限制。</li>
+<li>国会有权就个人收入进行课税，且不对收入来源进行区分，所得税收不与其他各州进行分配，也不必参考人口普查或统计资料，所得税起征点中不包括规定数额的职业费用、商业费用和个人津贴，对于超过起征点的个人所得实行统一的税率。所谓“个人”，不包括公司和其他类型的法人。</li>
+<li>所有与美国政府和其他方面签订的，以美元计价货币的合同，以及联邦法律中规定的美元总额，每年都应依据前一年的一般物价水平进行调整。</li>
+</ol>
+<p>虽然是比较理想化的建议，但弗里德曼的思想可见一斑。</p>
+<p>下面简单说下个人体会。书里有些观点不免偏激，也有时代的局限性。中国是一个市场加宏观调控的国家，甚至宏观调控还多一点。从结果来看，虽然面临很多问题，但总体是非常成功的。俗话说，实践是检验真理的唯一标准。自由市场是不是万能药，如果是自由市场中国能不能发展的比现在好，谁都不敢说。</p>
+<p>通向真理的路往往不止一条，一切只能待时间来证明。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/10/01/Employee-Paradox/"><span>打工者的悖论</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/10/01/Employee-Paradox/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-10-01T05:50:52.000Z">
+          2017-10-01
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>经过几年的打工生涯后，我非常悲伤地发现了一个残酷却不得不面对的现实。</p>
+<p>对于打工者这个群体，如果生活上的目标是资本家，你会发现，这个群体越努力，他们与资本家的差距就会越大。反之，如果不努力，周围又会有很多努力的打工者等着随时替代你。这就是打工者的悲哀。</p>
+<p>资本家更乐于看见的，既不是把你剥削至死，也不是把你养得有资本变成下一个资本家。而是控制在温饱乃至小康的阶段，变成耽于享乐、不思进取的<strong>“小资产阶级”</strong>。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/09/30/Good-Format-Bad-Content/"><span>好格式，坏文章</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/09/30/Good-Format-Bad-Content/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-09-30T04:30:46.000Z">
+          2017-09-30
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>对于入行不久的交互设计师而言，甚至是有些资深设计师，我常常观察到这样的现象：在进行设计工作或文档撰写的过程中，始终纠结在字号、颜色、排版等格式细节中，反而忽略了真正重要的内容，导致整体的工作进展缓慢。这样的现象更容易出现在完美主义者身上。</p>
+<p>对一些文字工作者也是同理。现代计算机提供了丰富的软件帮助他们完成创作，过多的格式选择却让某些人沉溺于排出看起来完美的文字，而不是内容上完美的文字作品。这当然可以看成是技术影响文化的一种表现，但显然是不好的方面。</p>
+<p>追究这些现象背后的原因，只能说这是由人性决定的。当一件困难的任务和一件容易的任务同时摆在面前时，正常人通常倾向于先完成容易的任务。格式的调整很明显要比内容创造简单得多。</p>
+<p>格式化这件事究竟要在创作过程中进行，还是创作尾声进行？我本人是倾向于后者的。不可否认的是，格式与内容有某种程度上的相辅相成关系，但这依然不影响在创作尾声进行统一的格式调整。这样做还有一个优点，在进行格式调整时已经拥有了一种全局化的思维，有利于将工作做得更加出色。</p>
+<p>由此可以想到的这两年互联网圈层出不穷的新鲜词汇，本质上这些词汇是一种格式，一种美化，一种包装。在这样一个圈子里，要时刻警惕不要陷入这些光怪陆离的概念中，而是始终关注本质内容和底层逻辑。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/09/29/Comment-of-Amusing-Ourselves-to-Death/"><span>评《娱乐至死》</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/09/29/Comment-of-Amusing-Ourselves-to-Death/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-09-29T07:43:55.000Z">
+          2017-09-29
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>人们倾向使用成本更低的信息获取方式，就像水会自觉地从高处流向低处。而获取过程中有限的信息流失是可以被容忍的。</p>
+<p>娱乐化或者游戏化只是低成本方式的一种物化。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/09/25/Why-I-bought-Apple-Watch-Series-3/"><span>我为什么购买 Apple Watch Series 3 LTE ？</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/09/25/Why-I-bought-Apple-Watch-Series-3/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-09-25T07:36:06.000Z">
+          2017-09-25
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>Apple Watch Series 3 LTE 版本相比上一代有质的升级，已经越来越作为独立设备而非 iPhone 配件存在了。</p>
+<p>由于最近几个月我正在培养夜跑习惯，所以运动过程中的种种困难之处感受颇深。其一就是携带物对运动本身的阻碍，不跑步的人可能很难想象不用携带手机对跑步者的吸引力。你不用单独买个腰包或者臂包来放你的手机，不用在跑步时感受携带物无时无刻的存在。</p>
+<p>我期待的四个功能三代产品已基本能实现：</p>
+<ol>
+<li>离开手机后，别人能找到我；</li>
+<li>能支持支付宝和微信支付。目前看来付款码的方式是可行的，但需要用户扫商家二维码的场景估计就无能为力了；</li>
+<li>在跑步时能不依靠手机实现在线听歌，希望网易云音乐、QQ音乐能给力支持；</li>
+<li>离开手机能通过手表解锁共享单车，这点摩拜已作出表率。</li>
+</ol>
+<p>一旦能很好地完成以上四个场景，脱离手机3个小时内进行运动、就餐、近途出行的需求就能很好地被满足，市场反馈一定会高于预期。</p>
+<p>手表+AirPods的方案，让想摆脱手机控制的人看到了希望。小屏没有大屏有吸引力，但处理重要的事情已经绰绰有余，希望将精力重新投放到重要事情上的人有了新的选择。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
+    <h3 class="article-title"><a href="/2017/09/25/Hi/"><span>关于星星的记忆</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2017/09/25/Hi/" rel="bookmark">
+        <time class="entry-date published" datetime="2017-09-25T03:53:57.000Z">
+          2017-09-25
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <h4 id="北斗七星"><a href="#北斗七星" class="headerlink" title="北斗七星"></a>北斗七星</h4><p>小时候在伊犁，夜里我倒坐在爸爸自行车的后座上，从开发区往家赶。时值深秋，我穿着长裤和外套，风一个劲在耳边吹。开发区的路刚刚修好，几乎见不到什么车。我看着眼前的景物快速退去，只有天上的星星一动也不动。<strong>北斗七星</strong>闪烁着连成勺子的形状，一下子在哪个遥远的夜里在我脑海里刻下再也抹不去的印记。这是我第一个辨识出的星座，也是我目前唯一辨识出的两个星座之一。</p>
+<h4 id="扫把星"><a href="#扫把星" class="headerlink" title="扫把星"></a>扫把星</h4><p>97年的伊犁，冬天是个寒冬，在寒冬来临之前，天空出现了彗星。那时候没这么文绉绉，都叫<strong>扫把星</strong>。扫把星出现了大概一周，在天空中一路划过。白天的时候能隐约看到点亮光，夜里扫把星的尾巴拖得老长，照得天空其他星星黯然失色。于是每天晚饭后，看星星成了必修的功课，像我们这样的小孩尤其雀跃，和过节一样。都说出现扫把星必有不好的事情发生，果然那一年就有。</p>
+<h4 id="启明星"><a href="#启明星" class="headerlink" title="启明星"></a>启明星</h4><p>刚回洛阳的农村时，我晚上和奶奶睡。奶奶是个非常传统的农村老太太，身上总有些我们这个年龄的人看不懂学不会的生活技能。让我印象深刻的有两个：一是如果左邻右舍谁家的东西丢了，奶奶会用小木棍摆摆算算，最终给个寻找的方位。居然十有八九是准的；二是内地的学校上学都早，我每天要5点左右起床往学校赶，奶奶总是透过窗户观察<strong>启明星</strong>的位置来叫我。后来自己住，就用闹钟了。</p>
+<h4 id="流星"><a href="#流星" class="headerlink" title="流星"></a>流星</h4><p>不记得具体是哪一年了，大概是初二或者初三的时候，早上洗漱完毕从家往学校赶。小孩子步子慢，从家到学校大概要走半个小时。就在那半个小时里，我遇见了真正的<strong>流星</strong>雨，当时激动的心情到现在都难以忘怀。天上的星星“嗖嗖嗖”地往下掉，有的亮一些，有的暗一些，有一颗大的把整个天空照的像白天。那个清晨，够我许300次愿，但我已不记得当时许了什么。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
+    </div>
+
+    
+  </div>
+</article>
+
+
+
+
+<nav class="pagination">
+  
+  
+</nav>
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2018 Yining
+    
+  </p>
+</footer>
+    
+  </div>
+</div>
+</body>
+</html>
