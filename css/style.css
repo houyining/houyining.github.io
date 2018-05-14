@@ -428,6 +428,10 @@ li {
   line-height: 1.8;
 }
 
+.disqus-footer__wrapper{
+  display: none;
+}
+
 html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;

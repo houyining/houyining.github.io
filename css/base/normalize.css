@@ -427,3 +427,7 @@ th {
 li {
   line-height: 1.8;
 }
+
+.disqus-footer__wrapper{
+  display: none;
+}
