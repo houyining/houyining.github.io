@@ -115,22 +115,29 @@
 </article>
 
   
-	<div id="lv-container" data-id="city" data-uid="MTAyMC8zNjQ4My8xMzAxOA==">
+	<section id="comments" class="comment">
+	  <div id="disqus_thread">
+	  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  </div>
+	</section>
+
 	<script type="text/javascript">
-		(function(d, s) {
-				 var j, e = d.getElementsByTagName(s)[0];
-
-				 if (typeof LivereTower === 'function') { return; }
-
-				 j = d.createElement(s);
-				 j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-				 j.async = true;
-
-				 e.parentNode.insertBefore(j, e);
-			 })(document, 'script');
+	var disqus_shortname = 'ridiculous-island';
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
+	(function(){
+	  var dsq = document.createElement('script');
+	  dsq.type = 'text/javascript';
+	  dsq.async = true;
+	  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}());
 	</script>
-	<noscript>为正常使用评论功能请激活JavaScript</noscript>
-	</div>
 
 
 
