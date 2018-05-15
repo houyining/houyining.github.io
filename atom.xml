@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>荒唐岛</title>
+  
+  <subtitle>这是一个私人博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://houyining.github.com/"/>
+  <updated>2018-05-15T05:34:36.340Z</updated>
+  <id>http://houyining.github.com/</id>
+  
+  <author>
+    <name>Yining</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>古代中国居然存在《西部世界》中的人造人？</title>
+    <link href="http://houyining.github.com/2018/05/12/New-Evidence-of-the-Mastery-of-Artificial-Intelligence-Technology-in-Ancient-China/"/>
+    <id>http://houyining.github.com/2018/05/12/New-Evidence-of-the-Mastery-of-Artificial-Intelligence-Technology-in-Ancient-China/</id>
+    <published>2018-05-12T13:24:16.000Z</published>
+    <updated>2018-05-15T05:34:36.340Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://ww1.sinaimg.cn/large/4a5af380ly1fr8z7pz0urj218g0p0wks.jpg&quot; alt=&quot;&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="短文" scheme="http://houyining.github.com/categories/%E7%9F%AD%E6%96%87/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Unicode 和 UTF-8</title>
+    <link href="http://houyining.github.com/2018/01/12/Unicode-and-UTF-8/"/>
+    <id>http://houyining.github.com/2018/01/12/Unicode-and-UTF-8/</id>
+    <published>2018-01-12T07:08:58.000Z</published>
+    <updated>2018-01-12T07:57:14.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;最近在写程序的时候遇到了一些编码问题，做了一些研究，简单记录一下。&lt;/p&gt;
+&lt;p&gt;Mac OS
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>评《自由选择》</title>
+    <link href="http://houyining.github.com/2017/12/13/Comment-of-Free-to-Choose/"/>
+    <id>http://houyining.github.com/2017/12/13/Comment-of-Free-to-Choose/</id>
+    <published>2017-12-13T09:06:17.000Z</published>
+    <updated>2018-02-08T04:20:44.502Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;《自由选择》是大名鼎鼎的自由派经济学家弗里德曼的著作。看这本书之前我并不认识他，因为我对经济学一无所知，正因为无知，才激发了求知的好奇。整本书看完，说不上特别理解，但有一些观点是可以回忆起来的。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;推崇市场这个看不见的手，强调价格的信息传递作用。政府
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>打工者的悖论</title>
+    <link href="http://houyining.github.com/2017/10/01/Employee-Paradox/"/>
+    <id>http://houyining.github.com/2017/10/01/Employee-Paradox/</id>
+    <published>2017-10-01T05:50:52.000Z</published>
+    <updated>2017-10-01T06:04:53.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;经过几年的打工生涯后，我非常悲伤地发现了一个残酷却不得不面对的现实。&lt;/p&gt;
+&lt;p&gt;对于打工者这个群体，如果生活上的目标是资本家，你会发现，这个群体越努力，他们与资本家的差距就会越大。反之，如果不努力，周围又会有很多努力的打工者等着随时替代你。这就是打工者的悲哀。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>好格式，坏文章</title>
+    <link href="http://houyining.github.com/2017/09/30/Good-Format-Bad-Content/"/>
+    <id>http://houyining.github.com/2017/09/30/Good-Format-Bad-Content/</id>
+    <published>2017-09-30T04:30:46.000Z</published>
+    <updated>2017-09-30T06:05:46.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;对于入行不久的交互设计师而言，甚至是有些资深设计师，我常常观察到这样的现象：在进行设计工作或文档撰写的过程中，始终纠结在字号、颜色、排版等格式细节中，反而忽略了真正重要的内容，导致整体的工作进展缓慢。这样的现象更容易出现在完美主义者身上。&lt;/p&gt;
+&lt;p&gt;对一些文字工作者也是
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>评《娱乐至死》</title>
+    <link href="http://houyining.github.com/2017/09/29/Comment-of-Amusing-Ourselves-to-Death/"/>
+    <id>http://houyining.github.com/2017/09/29/Comment-of-Amusing-Ourselves-to-Death/</id>
+    <published>2017-09-29T07:43:55.000Z</published>
+    <updated>2017-09-29T08:03:50.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;人们倾向使用成本更低的信息获取方式，就像水会自觉地从高处流向低处。而获取过程中有限的信息流失是可以被容忍的。&lt;/p&gt;
+&lt;p&gt;娱乐化或者游戏化只是低成本方式的一种物化。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我为什么购买 Apple Watch Series 3 LTE ？</title>
+    <link href="http://houyining.github.com/2017/09/25/Why-I-bought-Apple-Watch-Series-3/"/>
+    <id>http://houyining.github.com/2017/09/25/Why-I-bought-Apple-Watch-Series-3/</id>
+    <published>2017-09-25T07:36:06.000Z</published>
+    <updated>2017-09-30T05:50:32.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Apple Watch Series 3 LTE 版本相比上一代有质的升级，已经越来越作为独立设备而非 iPhone
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于星星的记忆</title>
+    <link href="http://houyining.github.com/2017/09/25/Hi/"/>
+    <id>http://houyining.github.com/2017/09/25/Hi/</id>
+    <published>2017-09-25T03:53:57.000Z</published>
+    <updated>2017-09-25T06:55:49.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;北斗七星&quot;&gt;&lt;a href=&quot;#北斗七星&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
