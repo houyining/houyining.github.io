@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://houyining.github.com/"/>
-  <updated>2018-07-10T06:15:37.341Z</updated>
+  <updated>2018-07-10T06:37:40.034Z</updated>
   <id>http://houyining.github.com/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>关于“小程序”的几点思考</title>
+    <link href="http://houyining.github.com/2018/07/10/%E5%85%B3%E4%BA%8E%E2%80%9C%E5%B0%8F%E7%A8%8B%E5%BA%8F%E2%80%9D%E7%9A%84%E5%87%A0%E7%82%B9%E6%80%9D%E8%80%83/"/>
+    <id>http://houyining.github.com/2018/07/10/关于“小程序”的几点思考/</id>
+    <published>2018-07-10T06:27:14.000Z</published>
+    <updated>2018-07-10T06:37:40.034Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;小程序更接近Web而不是App，是一个个离散的页面，不能用应用的视角去思考问题。&lt;/li&gt;
+&lt;li&gt;小程序的互动性和传播性能很好地解决被动性需求；主动性需求如何更好地解决是微信接下来关注的重点。&lt;/li&gt;
+&lt;li&gt;微信越来越像操作系统，值得考虑的是下一代操作系统，社交关系、支付等基础能力是否会从应用级别下沉到系统级别。&lt;/li&gt;
+&lt;li&gt;小程序与用户的连接性没有很好地解决，目前服务通知是一种暂时性的处理办法。&lt;/li&gt;
+&lt;li&gt;小程序运用场景进入下一层级后，会越来越少强调“用完即走”这件事。&lt;/li&gt;
+&lt;li&gt;超链接是互联网最伟大的发明之一，有可能换一种形式在小程序内复现，从而打破目前信息和服务的封闭状态。&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="观点" scheme="http://houyining.github.com/categories/%E8%A7%82%E7%82%B9/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>缅怀“用音乐倾听彼此”</title>
     <link href="http://houyining.github.com/2018/07/10/%E7%94%A8%E9%9F%B3%E4%B9%90%E5%80%BE%E5%90%AC%E5%BD%BC%E6%AD%A4/"/>
     <id>http://houyining.github.com/2018/07/10/用音乐倾听彼此/</id>
     <published>2018-07-10T05:08:55.000Z</published>
-    <updated>2018-07-10T06:15:37.341Z</updated>
+    <updated>2018-07-10T06:19:58.830Z</updated>
     
     <summary type="html">
     
