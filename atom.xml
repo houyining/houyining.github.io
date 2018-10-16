@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://houyining.github.com/"/>
-  <updated>2018-07-10T09:22:55.016Z</updated>
+  <updated>2018-10-16T02:49:01.635Z</updated>
   <id>http://houyining.github.com/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>RSS 的衰落</title>
+    <link href="http://houyining.github.com/2018/10/16/RSS%E7%9A%84%E8%A1%B0%E8%90%BD/"/>
+    <id>http://houyining.github.com/2018/10/16/RSS的衰落/</id>
+    <published>2018-10-16T02:45:55.000Z</published>
+    <updated>2018-10-16T02:49:01.635Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;RSS
+        
+      
+    
+    </summary>
+    
+      <category term="观点" scheme="http://houyining.github.com/categories/%E8%A7%82%E7%82%B9/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>设计方法</title>
+    <link href="http://houyining.github.com/2018/10/16/%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/"/>
+    <id>http://houyining.github.com/2018/10/16/设计方法/</id>
+    <published>2018-10-16T02:34:27.000Z</published>
+    <updated>2018-10-16T02:45:35.062Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我总结行之有效的方法分三个步骤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分解。拿到一个问题后，分析基本现状和所处的环境，将环节分解，将维度分解，将因子分解。分拆的越细致，越容易发现问题和潜在的机会点。&lt;/li&gt;
+&lt;li&gt;发散。发散指在每一个环节上探索新的分支，在每一个维度上探索新的维度，在每一个因子上探索新的因子。&lt;/li&gt;
+&lt;li&gt;收敛。也即抽象过程和抽象结果，通过收敛优化整合不同的环节、维度和因子，以达到最优的业务或设计结果。&lt;br&gt;这一方法不仅可以用在设计上，其实这是解决问题的通用方法。&lt;/li&gt;
+&lt;/ul&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="观点" scheme="http://houyining.github.com/categories/%E8%A7%82%E7%82%B9/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>一个不成熟的小建议</title>
     <link href="http://houyining.github.com/2018/07/10/%E4%B8%80%E4%B8%AA%E4%B8%8D%E6%88%90%E7%86%9F%E7%9A%84%E5%B0%8F%E5%BB%BA%E8%AE%AE/"/>
     <id>http://houyining.github.com/2018/07/10/一个不成熟的小建议/</id>
     <published>2018-07-10T08:50:42.000Z</published>
-    <updated>2018-07-10T09:22:55.016Z</updated>
+    <updated>2018-07-10T09:23:21.732Z</updated>
     
     <summary type="html">
     
