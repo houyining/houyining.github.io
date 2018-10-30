@@ -65,6 +65,83 @@
 
   
     
+    <h3 class="article-title"><a href="/2018/01/12/Unicode-and-UTF-8/"><span>Unicode 和 UTF-8</span></a></h3>
+    
+  
+
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/2018/01/12/Unicode-and-UTF-8/" rel="bookmark">
+        <time class="entry-date published" datetime="2018-01-12T07:08:58.000Z">
+          2018-01-12
+        </time>
+      </a>
+    </span>
+  </div>
+
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
+        <p>最近在写程序的时候遇到了一些编码问题，做了一些研究，简单记录一下。</p>
+<p>Mac OS 默认安装的Python版本是2.7，我也懒得折腾，一直基于2.7版本工作。但是前两天在处理Emoji的时候，发现用Python遍历字符串中的字符时，会默认把单个Emoji表情拆分成多个字符。</p>
+<p>产生这个问题的原因是Python2.7版本处理Unicode字符是基于USC2编码，即使用两个字节来标识单个Unicode字符，但是部分Emoji表情已经超出USC2的范围，应该使用USC4来处理。</p>
+<p>解决这个问题的办法有两种：</p>
+<ol>
+<li>重新编译Python2.7，并指定Unicode编码方式为USC4</li>
+<li>使用Python3.3+，默认使用USC4</li>
+</ol>
+<p>我决定使用第二种方式，因此，我也打算将应用版本升级到最新的Python3.6.4。在研究这个问题的过程中，也对Unicode字符集有个更深的了解。</p>
+<p>Unicode 顾名思义，是为了解决不同语言和符号在数字世界统一显示的问题，是使用“U+”开头的十六进制的数字串。被称为“Code Point”。</p>
+<p>全世界所有的字符假如超过10万个，那么就需要至少3个字节来表示一个“Code Point”，2个字节16比特最大表示65536。并且Unicode是可以扩充的字符集，并没有限制字符个数。</p>
+<p>如果直接使用“Code Point”来映射字符，那么Unicode字符集扩展进行扩展时，到底使用几个字节来表示一个字符就会变成一件不确定的事。另外还有一件不能忍受的事是在表示英文字母和数字时（互联网上绝大部分内容），本来使用一个字节就能搞定的事变成使用四个字节（假定），带来了巨大的存储和网络带宽浪费。</p>
+<p>于是对Unicode编码就变得很有必要了，要让计算机理解Unicode数字串究竟代表那个字符，就必须告诉计算机编码标准，目前常见的编码方式有“ASCII”、“UTF-8”、“UTF-16”等，旧时代遗留下来的上百种编码方式，也可以运用到对Unicode的字符集的编码上，于是皆大欢喜。</p>
+<p>其中最流行的编码方式是“UTF-8”，这是一种可变长的编码方式。换句话说，如果是英文字符，采用“UTF-8”编码，则占用一个字节；如果是中文，采用“UTF-8”编码，则占用二个字节。所以采用UTF-8编码的文件，单个字符占用的字节数从1个到多个不等。</p>
+<p>所以在Python2.7判断字符串长度时，无法识别超过2个字节的字符，所以直接拆分处理了。</p>
+<p>上文只是基于这两天研究的一个总结，部分细节可能不准确，欢迎勘正。</p>
+
+      
+    </div>
+
+  </div>
+
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+      
+
+    <span class="post-categories">
+      <i class="icon-categories"></i>
+        <a href="/categories/技术/">技术</a>
+    </span>
+    
+
+    
+
+    </div>
+
+    
+    <div class="article-meta pull-right">
+      <span>
+        <i class="icon-comments"></i>
+        <span>
+          <a href="/2018/01/12/Unicode-and-UTF-8/#comment">评论</a>
+        </span>
+      </span>
+    </div>
+    
+  </div>
+</article>
+
+
+
+  <article>
+
+  
+    
     <h3 class="article-title"><a href="/2017/12/13/Comment-of-Free-to-Choose/"><span>评《自由选择》</span></a></h3>
     
   
